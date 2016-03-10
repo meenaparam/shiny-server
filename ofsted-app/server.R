@@ -61,7 +61,7 @@ shinyServer(function(input, output) {
                     
                     mypred1 <- tidyr::gather(data = finalpred, key = ofstedgrade, value = probability)
                     
-                     gg <- ggplot(data = mypred1, aes(x = factor(ofstedgrade), y = probability, fill = factor(ofstedgrade))) + geom_bar(stat = "identity")  + scale_x_discrete(limits = c("Outstanding", "Good", "Requires Improvement", "Inadequate")) + scale_y_continuous(labels=percent) + geom_text(aes(label = paste0(round(probability*100, 0),"%")), position = position_dodge(0.9), vjust = -1, size = 4) + xlab("Ofsted grade") + ylab("Probability") + guides(fill=FALSE) + theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold")) + coord_cartesian(ylim = c(0,1))
+                     gg <- ggplot(data = mypred1, aes(x = factor(ofstedgrade), y = probability, fill = factor(ofstedgrade))) + geom_bar(stat = "identity")  + scale_x_discrete(limits = c("Outstanding", "Good", "Requires Improvement", "Inadequate")) + scale_y_continuous(labels=percent) + geom_text(aes(label = paste0(round(probability*100, 0),"%")), position = position_dodge(0.9), vjust = -1, size = 4) + xlab("") + ylab("Probability") + guides(fill=FALSE) + theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold")) + coord_cartesian(ylim = c(0,1))
                     
                     print(gg)
                     
@@ -113,7 +113,7 @@ shinyServer(function(input, output) {
 
                     mypred1 <- tidyr::gather(data = finalpred, key = ofstedgrade, value = probability)
 
-                    gg <- ggplot(data = mypred1, aes(x = factor(ofstedgrade), y = probability, fill = factor(ofstedgrade))) + geom_bar(stat = "identity")  + scale_x_discrete(limits = c("Outstanding", "Good", "Requires Improvement", "Inadequate")) + scale_y_continuous(labels=percent) + geom_text(aes(label = paste0(round(probability*100, 0),"%")), position = position_dodge(0.9), vjust = -1, size = 4) + xlab("Ofsted grade") + ylab("Probability") + guides(fill=FALSE) + theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold")) + coord_cartesian(ylim = c(0,1))
+                    gg <- ggplot(data = mypred1, aes(x = factor(ofstedgrade), y = probability, fill = factor(ofstedgrade))) + geom_bar(stat = "identity")  + scale_x_discrete(limits = c("Outstanding", "Good", "Requires Improvement", "Inadequate")) + scale_y_continuous(labels=percent) + geom_text(aes(label = paste0(round(probability*100, 0),"%")), position = position_dodge(0.9), vjust = -1, size = 4) + xlab("") + ylab("Probability") + guides(fill=FALSE) + theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold")) + coord_cartesian(ylim = c(0,1))
 
                     print(gg)
 
@@ -148,7 +148,7 @@ shinyServer(function(input, output) {
 
                     mypred1 <- tidyr::gather(data = finalpred, key = ofstedgrade, value = probability)
 
-                    gg <- ggplot(data = mypred1, aes(x = factor(ofstedgrade), y = probability, fill = factor(ofstedgrade))) + geom_bar(stat = "identity")  + scale_x_discrete(limits = c("Outstanding", "Good", "Requires Improvement", "Inadequate")) + scale_y_continuous(labels=percent) + geom_text(aes(label = paste0(round(probability*100, 0),"%")), position = position_dodge(0.9), vjust = -1, size = 4) + xlab("Ofsted grade") + ylab("Probability") + guides(fill=FALSE) + theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold")) + coord_cartesian(ylim = c(0,1))
+                    gg <- ggplot(data = mypred1, aes(x = factor(ofstedgrade), y = probability, fill = factor(ofstedgrade))) + geom_bar(stat = "identity")  + scale_x_discrete(limits = c("Outstanding", "Good", "Requires Improvement", "Inadequate")) + scale_y_continuous(labels=percent) + geom_text(aes(label = paste0(round(probability*100, 0),"%")), position = position_dodge(0.9), vjust = -1, size = 4) + xlab("") + ylab("Probability") + guides(fill=FALSE) + theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold")) + coord_cartesian(ylim = c(0,1))
 
                     print(gg)
 
@@ -184,7 +184,7 @@ shinyServer(function(input, output) {
 
                     mypred1 <- tidyr::gather(data = finalpred, key = ofstedgrade, value = probability)
 
-                    gg <- ggplot(data = mypred1, aes(x = factor(ofstedgrade), y = probability, fill = factor(ofstedgrade))) + geom_bar(stat = "identity")  + scale_x_discrete(limits = c("Outstanding", "Good", "Requires Improvement", "Inadequate")) + scale_y_continuous(labels=percent) + geom_text(aes(label = paste0(round(probability*100, 0),"%")), position = position_dodge(0.9), vjust = -1, size = 4) + xlab("Ofsted grade") + ylab("Probability") + guides(fill=FALSE) + theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold")) + coord_cartesian(ylim = c(0,1))
+                    gg <- ggplot(data = mypred1, aes(x = factor(ofstedgrade), y = probability, fill = factor(ofstedgrade))) + geom_bar(stat = "identity")  + scale_x_discrete(limits = c("Outstanding", "Good", "Requires Improvement", "Inadequate")) + scale_y_continuous(labels=percent) + geom_text(aes(label = paste0(round(probability*100, 0),"%")), position = position_dodge(0.9), vjust = -1, size = 4) + xlab("") + ylab("Probability") + guides(fill=FALSE) + theme(axis.text=element_text(size=12), axis.title=element_text(size=14,face="bold")) + coord_cartesian(ylim = c(0,1))
 
                     print(gg)
 
