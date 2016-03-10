@@ -1,0 +1,44 @@
+---
+title: "Methods"
+author: "Meenakshi Parameshwaran"
+date: "4 March 2016"
+output: html_document
+---
+
+
+## Methods
+
+### Datasets
+
+Two datasets were used in this shiny app. Both come from the UK Department of Education's statistics page.
+
+- Ofsted dataset comes from the maintained schools statisics release September 2014 to Aug 2015: https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/483703/School_inspection_data_provisional_2.xlsx
+- KS4 performance dataset comes from the 2015 school and college performance tables : http://www.education.gov.uk/schools/performance/download/xls/england_ks4.zip
+
+### Machine learning algorithms
+
+The `caret` package was used to fit the machine learning algorithms.
+
+The school dataset was split into training (70%) and testing (30%) datasets. All models were fit using the same training parameters and the same random seeds. Defaults were used except that models were tuned using 5-fold (rather than 10-fold) cross-valiation without repeat. Parallel computation was employed using the `parallel` and `doParallel` packages.
+
+The specific algorithms:
+
+- Linear Discriminant Analsysis was fit using the `lda` method
+- Random Forest was fit using the `rf` method
+- Naive Bayes was fit using the `naiveBayes` method
+- K-Nearest Neighbours was fit using the `knn` method
+
+For more information on these methods, see the [`caret` package's GitHub page](http://topepo.github.io/caret/index.html).
+
+The best performer was the `lda` model. However, none of the algorithms employed achieved an out-of-sample error rate of under 40%. This indicates that other variables are needed to make better predictions and that further tuning and refining of the models is needed. However, the variables and models included here do a decent job of explaining a reasonable amount of the variation in gradings. Three other algorithms were also implemented but not used in the app because of lower accuracy rates than the four ultimately chosen. The choice of algorithms offered here is one of many examples of how statistical analyses and data aren't as "objective" as is often claimed.
+
+### Credits
+
+You can find out more about building applications with Shiny here: http://shiny.rstudio.com
+
+I referred to [miningthedetails' shiny app ](https://miningthedetails.shinyapps.io/knn-dashboard-shiny-plotly/) and [hack-r's server.R code](https://github.com/hack-r/coursera_shiny/blob/master/server.R) code to help me build my app.
+
+
+Finally, this app was partly inspired by that created by [Trevor Burton](https://www.jtb-education.co.uk/ofstedpredictor.php). My app is an extension of Burton's as it uses a more recent dataset, allows the user to choose a classification algorithm, and employs more variables in the prediction. To reiterate Burton:
+>"I've only included the things you don't have any control over, so you can see how wrong it is that these should be correlated with Ofsted judgements."
+

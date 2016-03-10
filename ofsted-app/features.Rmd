@@ -1,0 +1,25 @@
+---
+title: "Features"
+author: "Meenakshi Parameshwaran"
+date: "4 March 2016"
+output: html_document
+---
+
+## Features description
+
+There are six predictor variables and one outcome variable in the dataset used for this app. More information on the *classification algorithms* can be found in the **Methods** tab.
+
+- *Region*: this is the region of England where the school is located.
+
+- *School type*: this is the type of school according to its governance structure.
+
+- *KS2 APS (key stage 2 average point score)*: this is the average point score achieved by the school's year 11 cohort (16 year olds) when they were aged 11. It has been found to be a good predictor of the test results 16 year olds achieve in their key stage 4 tests.
+
+- *Religious denomination*: this is whether the school has a religious affiliation.
+
+- *Gender composition*: this is whether the school is single-sex or mixed in gender composition.
+
+- *Total pupils*: this is the number of pupils enrolled at the school.
+
+- *Ofsted grade*: this is the overall grade given to schools by the Office for Standards in Education, Children's Services and Skills [(Ofsted)](https://www.gov.uk/government/organisations/ofsted/about) following a school inspection. Four grades are possible: Outstanding, Good, Requires Improvement and Inadequate. This is the outcome variable.
+
