@@ -18,7 +18,7 @@ shinyUI(navbarPage("",
                     fluidPage(
                         
                         h4("Predicting Ofsted grades"),
-                        p("This app estimates the probability of a secondary school being awarded a certain grade after an inspection by Ofsted. To use it, simply select the characteristics of the school you want to predict for and then choose a prediction algorithm. The probabilites are shown in the chart below."),
+                        p("This app estimates the probability of a secondary school being awarded a certain grade after an inspection by Ofsted. To use it, simply select the characteristics of the school you want to predict for and then choose a prediction algorithm. The estimated probabilites are shown in the chart below. See the methods page for limitations."),
                         
                         hr(),
                         plotOutput("predplot", height = "300px"),

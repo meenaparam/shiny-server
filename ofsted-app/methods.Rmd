@@ -30,7 +30,7 @@ The specific algorithms:
 
 For more information on these methods, see the [`caret` package's GitHub page](http://topepo.github.io/caret/index.html).
 
-The best performer was the `lda` model. However, none of the algorithms employed achieved an out-of-sample error rate of under 40%. This indicates that other variables are needed to make better predictions and that further tuning and refining of the models is needed. However, the variables and models included here do a decent job of explaining a reasonable amount of the variation in gradings. Three other algorithms were also implemented but not used in the app because of lower accuracy rates than the four ultimately chosen. The choice of algorithms offered here is one of many examples of how statistical analyses and data aren't as "objective" as is often claimed.
+The best performer was the `lda` model (although its predictions based on increased KS2 APS are very odd). However, none of the algorithms employed achieved an out-of-sample error rate of under 40%. This indicates that other variables are needed to make better predictions and that further tuning and refining of the models is needed. However, the variables and models included here do a decent job of explaining a reasonable amount of the variation in gradings. Three other algorithms were also implemented but not used in the app because of lower accuracy rates than the four ultimately chosen. The choice of algorithms offered here is one of many examples of how statistical analyses and data aren't as "objective" as is often claimed.
 
 ### Credits
 
